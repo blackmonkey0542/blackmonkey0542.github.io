@@ -64,84 +64,6 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-Vue基础" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/01/31/Vue%E5%9F%BA%E7%A1%80/" class="article-date">
-  <time datetime="2020-01-30T19:38:44.000Z" itemprop="datePublished">2020-01-31</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/01/31/Vue%E5%9F%BA%E7%A1%80/">Vue基础</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><a href="https://cn.vuejs.org" target="_blank" rel="noopener">vue官方文档download</a></p>
-<hr>
-<h2 id="第一个Vue程序"><a href="#第一个Vue程序" class="headerlink" title="第一个Vue程序"></a>第一个Vue程序</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div id&#x3D;&quot;app&quot;&gt;</span><br><span class="line">        &#123;&#123;message&#125;&#125;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line"></span><br><span class="line">    &lt;script src&#x3D;&quot;https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;vue&#x2F;dist&#x2F;vue.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line">    var app &#x3D; new Vue(&#123;</span><br><span class="line">        el:&quot;#app&quot;,</span><br><span class="line">        data:&#123;</span><br><span class="line">            message:&quot;hello Vue!&quot;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">    &lt;&#x2F;script&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br></pre></td></tr></table></figure>
-<ol>
-<li><p>导入开发版本的Vue.js</p>
-</li>
-<li><p>创建Vue实例对象，设置el属性和data属性</p>
-</li>
-<li><p>使用简洁的模板语法把数据渲染到页面上</p>
-</li>
-</ol>
-<hr>
-<h2 id="el-挂载点"><a href="#el-挂载点" class="headerlink" title="el:挂载点"></a>el:挂载点</h2><h4 id="el是用来设置Vue实力挂载（管理）的元素"><a href="#el是用来设置Vue实力挂载（管理）的元素" class="headerlink" title="el是用来设置Vue实力挂载（管理）的元素"></a>el是用来设置Vue实力挂载（管理）的元素</h4><ol>
-<li><p>VUE示例作用的范围是什么？</p>
-<ul>
-<li>Vue会管理el选项命中的元素以及内部的后代元素，及 必须在el：挂载点的内部</li>
-</ul>
-</li>
-<li><p>是否可以使用其他选择器</p>
-<ul>
-<li>可以使用其他选择器，但是推荐使用id选择器</li>
-</ul>
-</li>
-<li><p>是否可以设计其他的dom元素</p>
-<ul>
-<li><p>大部分都行，但是在 &#60;html&#62;和&#60;body&#62;标签内不可以</p>
-</li>
-<li><p>建议使用div标签 因为其他标签大多有其他自己的样式</p>
-</li>
-</ul>
-</li>
-</ol>
-<p>样例代码</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">     &#123;&#123;message&#125;&#125;&lt;!--范围测试 --&gt;</span><br><span class="line">    &lt;span&gt;&#123;&#123;message&#125;&#125;&lt;&#x2F;span&gt;&lt;!--范围测试--&gt;</span><br><span class="line">    &lt;div id&#x3D;&quot;app&quot; class&#x3D;&quot;app&quot;&gt;</span><br><span class="line">        &#123;&#123;message&#125;&#125;&lt;!--范围测试--&gt;</span><br><span class="line">        &lt;span&gt;&#123;&#123;message&#125;&#125;&lt;&#x2F;span&gt;&lt;!--范围测试--&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">    可以使用其他标签</span><br><span class="line">    &lt;!-- &lt;h2 id&#x3D;&quot;app&quot; class&#x3D;&quot;app&quot;&gt;</span><br><span class="line">        &#123;&#123;message&#125;&#125; 范围测试</span><br><span class="line">        &lt;span&gt;&#123;&#123;message&#125;&#125;&lt;&#x2F;span&gt;范围测试</span><br><span class="line">    &lt;&#x2F;h2&gt;    --&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &lt;script src&#x3D;&quot;https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;vue&#x2F;dist&#x2F;vue.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line">    var app &#x3D; new Vue(&#123;</span><br><span class="line">        el:&quot;#app&quot;,&#x2F;&#x2F;默认id选择器</span><br><span class="line">        &#x2F;&#x2F;el:&quot;.app&quot;,&#x2F;&#x2F;class选择器也可以用</span><br><span class="line">        &#x2F;&#x2F;el:&quot;div&quot;，&#x2F;&#x2F;标签选择器也可以用</span><br><span class="line">        data:&#123;</span><br><span class="line">            message:&quot;hello Vue!&quot;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">    &lt;&#x2F;script&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br></pre></td></tr></table></figure>
-<hr>
-<h2 id="data-数据对象"><a href="#data-数据对象" class="headerlink" title="data:数据对象"></a>data:数据对象</h2><ul>
-<li>Vue中用到的数据定义在data中</li>
-<li>data中可以写复杂类型的数据</li>
-<li>渲染复杂类型的数据时，遵循js语法即可</li>
-</ul>
-<p>样例测试代码</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div id&#x3D;&quot;app&quot;&gt;</span><br><span class="line">        &lt;span&gt;不同的获取方式&lt;&#x2F;span&gt;&lt;br&gt;</span><br><span class="line">        &#123;&#123;message&#125;&#125;</span><br><span class="line">        &lt;h2&gt;&#123;&#123;school.weibo&#125;&#125;&lt;&#x2F;h2&gt;</span><br><span class="line">        &lt;h2&gt;&#123;&#123;school.name&#125;&#125;&lt;&#x2F;h2&gt;</span><br><span class="line">        &lt;ul&gt;</span><br><span class="line">            &lt;li&gt;&#123;&#123;array_test[0]&#125;&#125;&lt;&#x2F;li&gt;</span><br><span class="line">        &lt;&#x2F;ul&gt;</span><br><span class="line"></span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line"></span><br><span class="line">    &lt;script src&#x3D;&quot;https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;vue&#x2F;dist&#x2F;vue.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line">        var app &#x3D; new Vue(&#123;</span><br><span class="line">            el:&quot;#app&quot;,</span><br><span class="line">            data:&#123;</span><br><span class="line">                message:&quot;hello world!&quot;,</span><br><span class="line">                school:&#123;</span><br><span class="line">                    name:&quot;Oliver&quot;,</span><br><span class="line">                    weibo:&quot;weibo:@一个喜欢梅西的钢铁侠&quot;,</span><br><span class="line">                    bilibili:&quot;bilibili:一个喜欢梅西的钢铁侠&quot;</span><br><span class="line">                &#125;,</span><br><span class="line">                array_test:[&quot;QQ&quot;,&quot;WeChat&quot;]</span><br><span class="line">            &#125;,</span><br><span class="line"></span><br><span class="line">        &#125;)</span><br><span class="line">    &lt;&#x2F;script&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/01/31/Vue%E5%9F%BA%E7%A1%80/" data-id="ck6156y810000esu1ejuq2qbg" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
     <article id="post-Vue本地应用(二)" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/01/31/Vue%E6%9C%AC%E5%9C%B0%E5%BA%94%E7%94%A8(%E4%BA%8C)/" class="article-date">
@@ -342,6 +264,84 @@
 
 
   
+    <article id="post-Vue基础" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/01/30/Vue%E5%9F%BA%E7%A1%80/" class="article-date">
+  <time datetime="2020-01-30T12:42:41.000Z" itemprop="datePublished">2020-01-30</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/01/30/Vue%E5%9F%BA%E7%A1%80/">Vue基础</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><a href="https://cn.vuejs.org" target="_blank" rel="noopener">vue官方文档download</a></p>
+<hr>
+<h2 id="第一个Vue程序"><a href="#第一个Vue程序" class="headerlink" title="第一个Vue程序"></a>第一个Vue程序</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div id&#x3D;&quot;app&quot;&gt;</span><br><span class="line">        &#123;&#123;message&#125;&#125;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line"></span><br><span class="line">    &lt;script src&#x3D;&quot;https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;vue&#x2F;dist&#x2F;vue.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line">    var app &#x3D; new Vue(&#123;</span><br><span class="line">        el:&quot;#app&quot;,</span><br><span class="line">        data:&#123;</span><br><span class="line">            message:&quot;hello Vue!&quot;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">    &lt;&#x2F;script&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br></pre></td></tr></table></figure>
+<ol>
+<li><p>导入开发版本的Vue.js</p>
+</li>
+<li><p>创建Vue实例对象，设置el属性和data属性</p>
+</li>
+<li><p>使用简洁的模板语法把数据渲染到页面上</p>
+</li>
+</ol>
+<hr>
+<h2 id="el-挂载点"><a href="#el-挂载点" class="headerlink" title="el:挂载点"></a>el:挂载点</h2><h4 id="el是用来设置Vue实力挂载（管理）的元素"><a href="#el是用来设置Vue实力挂载（管理）的元素" class="headerlink" title="el是用来设置Vue实力挂载（管理）的元素"></a>el是用来设置Vue实力挂载（管理）的元素</h4><ol>
+<li><p>VUE示例作用的范围是什么？</p>
+<ul>
+<li>Vue会管理el选项命中的元素以及内部的后代元素，及 必须在el：挂载点的内部</li>
+</ul>
+</li>
+<li><p>是否可以使用其他选择器</p>
+<ul>
+<li>可以使用其他选择器，但是推荐使用id选择器</li>
+</ul>
+</li>
+<li><p>是否可以设计其他的dom元素</p>
+<ul>
+<li><p>大部分都行，但是在 &#60;html&#62;和&#60;body&#62;标签内不可以</p>
+</li>
+<li><p>建议使用div标签 因为其他标签大多有其他自己的样式</p>
+</li>
+</ul>
+</li>
+</ol>
+<p>样例代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">     &#123;&#123;message&#125;&#125;&lt;!--范围测试 --&gt;</span><br><span class="line">    &lt;span&gt;&#123;&#123;message&#125;&#125;&lt;&#x2F;span&gt;&lt;!--范围测试--&gt;</span><br><span class="line">    &lt;div id&#x3D;&quot;app&quot; class&#x3D;&quot;app&quot;&gt;</span><br><span class="line">        &#123;&#123;message&#125;&#125;&lt;!--范围测试--&gt;</span><br><span class="line">        &lt;span&gt;&#123;&#123;message&#125;&#125;&lt;&#x2F;span&gt;&lt;!--范围测试--&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">    可以使用其他标签</span><br><span class="line">    &lt;!-- &lt;h2 id&#x3D;&quot;app&quot; class&#x3D;&quot;app&quot;&gt;</span><br><span class="line">        &#123;&#123;message&#125;&#125; 范围测试</span><br><span class="line">        &lt;span&gt;&#123;&#123;message&#125;&#125;&lt;&#x2F;span&gt;范围测试</span><br><span class="line">    &lt;&#x2F;h2&gt;    --&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &lt;script src&#x3D;&quot;https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;vue&#x2F;dist&#x2F;vue.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line">    var app &#x3D; new Vue(&#123;</span><br><span class="line">        el:&quot;#app&quot;,&#x2F;&#x2F;默认id选择器</span><br><span class="line">        &#x2F;&#x2F;el:&quot;.app&quot;,&#x2F;&#x2F;class选择器也可以用</span><br><span class="line">        &#x2F;&#x2F;el:&quot;div&quot;，&#x2F;&#x2F;标签选择器也可以用</span><br><span class="line">        data:&#123;</span><br><span class="line">            message:&quot;hello Vue!&quot;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">    &lt;&#x2F;script&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="data-数据对象"><a href="#data-数据对象" class="headerlink" title="data:数据对象"></a>data:数据对象</h2><ul>
+<li>Vue中用到的数据定义在data中</li>
+<li>data中可以写复杂类型的数据</li>
+<li>渲染复杂类型的数据时，遵循js语法即可</li>
+</ul>
+<p>样例测试代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div id&#x3D;&quot;app&quot;&gt;</span><br><span class="line">        &lt;span&gt;不同的获取方式&lt;&#x2F;span&gt;&lt;br&gt;</span><br><span class="line">        &#123;&#123;message&#125;&#125;</span><br><span class="line">        &lt;h2&gt;&#123;&#123;school.weibo&#125;&#125;&lt;&#x2F;h2&gt;</span><br><span class="line">        &lt;h2&gt;&#123;&#123;school.name&#125;&#125;&lt;&#x2F;h2&gt;</span><br><span class="line">        &lt;ul&gt;</span><br><span class="line">            &lt;li&gt;&#123;&#123;array_test[0]&#125;&#125;&lt;&#x2F;li&gt;</span><br><span class="line">        &lt;&#x2F;ul&gt;</span><br><span class="line"></span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line"></span><br><span class="line">    &lt;script src&#x3D;&quot;https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;vue&#x2F;dist&#x2F;vue.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line">        var app &#x3D; new Vue(&#123;</span><br><span class="line">            el:&quot;#app&quot;,</span><br><span class="line">            data:&#123;</span><br><span class="line">                message:&quot;hello world!&quot;,</span><br><span class="line">                school:&#123;</span><br><span class="line">                    name:&quot;Oliver&quot;,</span><br><span class="line">                    weibo:&quot;weibo:@一个喜欢梅西的钢铁侠&quot;,</span><br><span class="line">                    bilibili:&quot;bilibili:一个喜欢梅西的钢铁侠&quot;</span><br><span class="line">                &#125;,</span><br><span class="line">                array_test:[&quot;QQ&quot;,&quot;WeChat&quot;]</span><br><span class="line">            &#125;,</span><br><span class="line"></span><br><span class="line">        &#125;)</span><br><span class="line">    &lt;&#x2F;script&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/01/30/Vue%E5%9F%BA%E7%A1%80/" data-id="ck615bywn00008ou1fl908nkq" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-新年快乐" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/01/24/%E6%96%B0%E5%B9%B4%E5%BF%AB%E4%B9%90/" class="article-date">
@@ -446,15 +446,15 @@
       <ul>
         
           <li>
-            <a href="/2020/01/31/Vue%E5%9F%BA%E7%A1%80/">Vue基础</a>
-          </li>
-        
-          <li>
             <a href="/2020/01/31/Vue%E6%9C%AC%E5%9C%B0%E5%BA%94%E7%94%A8(%E4%BA%8C)/">Vue本地应用(二)</a>
           </li>
         
           <li>
             <a href="/2020/01/31/Vue%E6%9C%AC%E5%9C%B0%E5%BA%94%E7%94%A8(%E4%B8%80)/">Vue本地应用(一)</a>
+          </li>
+        
+          <li>
+            <a href="/2020/01/30/Vue%E5%9F%BA%E7%A1%80/">Vue基础</a>
           </li>
         
           <li>
