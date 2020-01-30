@@ -15,7 +15,7 @@
 <meta property="og:description" content="本地应用(一)用vue操纵网页元素- 通过Vue实现常见网页效果 - 学习Vue指令，以案例巩固知识点 - Vue指令是指v-开头的一组特殊语法 Vue 指令 内容绑定，事件绑定 v-text v-html v-on基础   显示切换，属性绑定 v-show v-if v-mind   列表循环，表单元素绑定 v-for v-on补充 v-model     内容绑定，事件绑定 v-text———">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-01-30T16:13:36.000Z">
-<meta property="article:modified_time" content="2020-01-30T16:14:29.564Z">
+<meta property="article:modified_time" content="2020-01-30T19:01:42.713Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -138,7 +138,7 @@
 按加号递增，按减号递减，有上限为10，下限为0，到达极限则会跳出提示框</code></pre><p>代码如下</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div id&#x3D;&quot;app&quot;&gt;</span><br><span class="line">        &lt;button @click&#x3D;&quot;minus&quot;&gt;-&lt;&#x2F;button&gt;</span><br><span class="line">        &lt;span&gt;&#123;&#123;counterdata&#125;&#125;&lt;&#x2F;span&gt;</span><br><span class="line">        &lt;button @click&#x3D;&quot;add&quot;&gt;+&lt;&#x2F;button&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">    &lt;script src&#x3D;&quot;https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;vue&#x2F;dist&#x2F;vue.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line">        var app &#x3D; new Vue(&#123;</span><br><span class="line">            el:&quot;#app&quot;,</span><br><span class="line">            data:&#123;</span><br><span class="line">                counterdata:0</span><br><span class="line">            &#125;,</span><br><span class="line">            methods: &#123;</span><br><span class="line">                add:function()&#123;</span><br><span class="line">                    if(this.counterdata&lt;10)&#123;</span><br><span class="line">                        this.counterdata&#x3D;this.counterdata+1;</span><br><span class="line">                    &#125;else&#123;</span><br><span class="line">                        console.log(&quot;到上限了！&quot;)</span><br><span class="line">                    &#125;</span><br><span class="line">                    </span><br><span class="line">                &#125;,</span><br><span class="line">                minus:function()&#123;</span><br><span class="line">                    if(this.counterdata&gt;0)&#123;</span><br><span class="line">                        this.counterdata&#x3D;this.counterdata-1;</span><br><span class="line">                    &#125;else&#123;</span><br><span class="line">                        console.log(&quot;到下限了！&quot;)</span><br><span class="line">                    &#125;   </span><br><span class="line">                &#125;</span><br><span class="line">            &#125;,</span><br><span class="line">        &#125;)</span><br><span class="line">    &lt;&#x2F;script&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br></pre></td></tr></table></figure>
 <hr>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><pre><code>- 创建Vue示例时：el(挂载点)，data(数据)，methons(方法)
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><pre><code>- 创建Vue示例时：el(挂载点)，data(数据)，methons(方法)
 - v-on作用为绑定事件，可简写为@
 - 方法中通过this获取此Vue示例中data中的数据
 - v-text用于设置元素的文本值
@@ -154,6 +154,15 @@
   
     
 <nav id="article-nav">
+  
+    <a href="/2020/01/31/%E6%9C%AC%E5%9C%B0%E5%BA%94%E7%94%A8/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          本地应用
+        
+      </div>
+    </a>
   
   
     <a href="/2020/01/30/vue%E5%9F%BA%E7%A1%80/" id="article-nav-older" class="article-nav-link-wrap">
@@ -195,6 +204,14 @@
       <ul>
         
           <li>
+            <a href="/2020/01/31/%E6%9C%AC%E5%9C%B0%E5%BA%94%E7%94%A8(%E4%BA%8C)/">本地应用</a>
+          </li>
+        
+          <li>
+            <a href="/2020/01/31/%E6%9C%AC%E5%9C%B0%E5%BA%94%E7%94%A8/">本地应用</a>
+          </li>
+        
+          <li>
             <a href="/2020/01/31/Vue%E6%9C%AC%E5%9C%B0%E5%BA%94%E7%94%A8(%E4%B8%80)/">Vue本地应用</a>
           </li>
         
@@ -204,10 +221,6 @@
         
           <li>
             <a href="/2020/01/24/%E6%96%B0%E5%B9%B4%E5%BF%AB%E4%B9%90/">新年快乐</a>
-          </li>
-        
-          <li>
-            <a href="/2020/01/22/welcome/">welcome</a>
           </li>
         
       </ul>
