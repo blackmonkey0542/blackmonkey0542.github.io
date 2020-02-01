@@ -5,13 +5,17 @@
   
 
   
-  <title>Hexo</title>
+  <title>Vue本地应用(三) | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="本地应用Part3用vue操纵网页元素- 通过Vue实现常见网页效果 - 学习Vue指令，以案例巩固知识点 - Vue指令是指v-开头的一组特殊语法 Vue 指令 内容绑定，事件绑定 v-text v-html v-on基础   显示切换，属性绑定 v-show v-if v-mind   列表循环，表单元素绑定 v-for v-on补充 v-model     列表循环，表单元素绑定 v-for">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Vue本地应用(三)">
+<meta property="og:url" content="http://yoursite.com/2020/02/02/Vue%E6%9C%AC%E5%9C%B0%E5%BA%94%E7%94%A8-%E4%B8%89/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="本地应用Part3用vue操纵网页元素- 通过Vue实现常见网页效果 - 学习Vue指令，以案例巩固知识点 - Vue指令是指v-开头的一组特殊语法 Vue 指令 内容绑定，事件绑定 v-text v-html v-on基础   显示切换，属性绑定 v-show v-if v-mind   列表循环，表单元素绑定 v-for v-on补充 v-model     列表循环，表单元素绑定 v-for">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-02-01T19:53:12.000Z">
+<meta property="article:modified_time" content="2020-02-01T19:54:25.226Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -62,9 +66,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-Vue本地应用-三" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Vue本地应用-三" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/02/02/Vue%E6%9C%AC%E5%9C%B0%E5%BA%94%E7%94%A8-%E4%B8%89/" class="article-date">
   <time datetime="2020-02-01T19:53:12.000Z" itemprop="datePublished">2020-02-02</time>
@@ -77,8 +79,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/02/02/Vue%E6%9C%AC%E5%9C%B0%E5%BA%94%E7%94%A8-%E4%B8%89/">Vue本地应用(三)</a>
+    <h1 class="article-title" itemprop="name">
+      Vue本地应用(三)
     </h1>
   
 
@@ -207,362 +209,19 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-Vue本地应用(二)" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/01/31/Vue%E6%9C%AC%E5%9C%B0%E5%BA%94%E7%94%A8(%E4%BA%8C)/" class="article-date">
-  <time datetime="2020-01-30T19:00:01.000Z" itemprop="datePublished">2020-01-31</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/01/31/Vue%E6%9C%AC%E5%9C%B0%E5%BA%94%E7%94%A8(%E4%BA%8C)/">Vue本地应用(二)</a>
-    </h1>
+    <a href="/2020/01/31/Vue%E6%9C%AC%E5%9C%B0%E5%BA%94%E7%94%A8(%E4%BA%8C)/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Vue本地应用(二)</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="本地应用Part2"><a href="#本地应用Part2" class="headerlink" title="本地应用Part2"></a>本地应用Part2</h1><h4 id="用vue操纵网页元素"><a href="#用vue操纵网页元素" class="headerlink" title="用vue操纵网页元素"></a>用vue操纵网页元素</h4><pre><code>- 通过Vue实现常见网页效果
-- 学习Vue指令，以案例巩固知识点
-- Vue指令是指v-开头的一组特殊语法</code></pre><hr>
-<h2 id="Vue-指令"><a href="#Vue-指令" class="headerlink" title="Vue 指令"></a>Vue 指令</h2><ol>
-<li>内容绑定，事件绑定<ul>
-<li>v-text</li>
-<li>v-html</li>
-<li>v-on基础</li>
-</ul>
-</li>
-<li>显示切换，属性绑定<ul>
-<li>v-show</li>
-<li>v-if</li>
-<li>v-mind</li>
-</ul>
-</li>
-<li>列表循环，表单元素绑定<ul>
-<li>v-for</li>
-<li>v-on补充</li>
-<li>v-model</li>
-</ul>
-</li>
-</ol>
-<hr>
-<h2 id="显示切换，属性绑定"><a href="#显示切换，属性绑定" class="headerlink" title="显示切换，属性绑定"></a>显示切换，属性绑定</h2><hr>
-<h3 id="v-show-后跟表达式true-or-false"><a href="#v-show-后跟表达式true-or-false" class="headerlink" title="v-show (后跟表达式true or false)"></a>v-show (后跟表达式true or false)</h3><p>——————根据表达式的真假，来切换元素的显示和隐藏</p>
-<p>样例代码(隐藏按钮，你也可以加到其他元素上面来控制显示或者不显示)</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div id&#x3D;&quot;app&quot;&gt;</span><br><span class="line">        &lt;input type&#x3D;&quot;button&quot; v-show&#x3D;&quot;isShow&quot; @click&#x3D;&quot;changeIsShow&quot; value&#x3D;&quot;单击尝试&quot;&gt;</span><br><span class="line">   &lt;&#x2F;div&gt;</span><br><span class="line">   </span><br><span class="line">    &lt;script src&#x3D;&quot;https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;vue&#x2F;dist&#x2F;vue.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line">        var app &#x3D; new Vue(&#123;</span><br><span class="line">            el:&quot;#app&quot;,</span><br><span class="line">            data:&#123;</span><br><span class="line">                isShow:true</span><br><span class="line">            &#125;,</span><br><span class="line">            methods: &#123;</span><br><span class="line">                changeIsShow:function()&#123;</span><br><span class="line">                this.isShow&#x3D;!this.isShow;</span><br><span class="line">            &#125;</span><br><span class="line">            &#125;,</span><br><span class="line">            </span><br><span class="line">        &#125;)</span><br><span class="line">    &lt;&#x2F;script&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br></pre></td></tr></table></figure>
-<p>备注</p>
-<pre><code>v-show后面也可以跟布尔表达式，比如19&gt;18,1+1&gt;2，来表示其布尔值</code></pre><hr>
-<h2 id="v-if"><a href="#v-if" class="headerlink" title="v-if"></a>v-if</h2><p>——————根据表达式的真假，切换元素的显示和隐藏（操纵dom元素）</p>
-<p>直接上样例代码</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div id&#x3D;&quot;app&quot;&gt;</span><br><span class="line">        &lt;p v-if&#x3D;&quot;isShow&quot;&gt;hello world!&lt;&#x2F;p&gt;</span><br><span class="line">        &lt;button @click&#x3D;&quot;changeIsShow&quot;&gt;单击变换&lt;&#x2F;button&gt;</span><br><span class="line">   &lt;&#x2F;div&gt;</span><br><span class="line">   </span><br><span class="line">    &lt;script src&#x3D;&quot;https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;vue&#x2F;dist&#x2F;vue.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line">        var app &#x3D; new Vue(&#123;</span><br><span class="line">            el:&quot;#app&quot;,</span><br><span class="line">            data:&#123;</span><br><span class="line">                isShow:false</span><br><span class="line">            &#125;,</span><br><span class="line">            methods: &#123;</span><br><span class="line">                changeIsShow:function()&#123;</span><br><span class="line">                this.isShow&#x3D;!this.isShow;</span><br><span class="line">            &#125;</span><br><span class="line">            &#125;,</span><br><span class="line">            </span><br><span class="line">        &#125;)</span><br><span class="line">    &lt;&#x2F;script&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br></pre></td></tr></table></figure>
-<p>乍一看这和v-show有啥区别啊，这俩玩意在用起来的时候也简直一样嘛<br>但是呢v-show只是控制dispaly 而v-if使用的时候直接从dom数中移除了</p>
-<blockquote>
-<p>v-show操纵样式 v-if操纵dom元素</p>
-</blockquote>
-<blockquote>
-<p>实际工作中频繁切换的元素用v-show 反之则用v-if</p>
-</blockquote>
-<h4 id="因为操纵dom数性能消耗比较大"><a href="#因为操纵dom数性能消耗比较大" class="headerlink" title="因为操纵dom数性能消耗比较大"></a>因为操纵dom数性能消耗比较大</h4><p>小结</p>
-<pre><code>- v-if的作用：根据表达式的真假切换元素的显示状态
-- 本质是通过操纵dom元素来切换显示状态的
-- 表达式为true 则存在于dom数中 反之相反
--频繁切换的元素用v-show 反之则用v-if，前者切换消耗小</code></pre><hr>
-<h2 id="v-bind"><a href="#v-bind" class="headerlink" title="v-bind"></a>v-bind</h2><p>——————设置元素的属性(such as:src,title,class)</p>
-<blockquote>
-<p>使用方法：v-bind:属性名 = 表达式</p>
-</blockquote>
-<pre><code>&gt; 也可以使用三元表达式 当作 表达式</code></pre><h4 id="写代码的时候可以直接用：来代替整个v-bind："><a href="#写代码的时候可以直接用：来代替整个v-bind：" class="headerlink" title="写代码的时候可以直接用：来代替整个v-bind："></a>写代码的时候可以直接用：来代替整个v-bind：</h4><p>样例代码:更改了value属性</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div id&#x3D;&quot;app&quot;&gt;</span><br><span class="line">        &lt;input type&#x3D;&quot;button&quot; v-bind:value&#x3D;&quot;Value&quot; @click&#x3D;&quot;changeValue&quot;&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">    &lt;script src&#x3D;&quot;https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;vue&#x2F;dist&#x2F;vue.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line">        var app &#x3D; new Vue(&#123;</span><br><span class="line">            el:&quot;#app&quot;,</span><br><span class="line">            data: &#123;</span><br><span class="line">                Value:&quot;这是一个样例&quot;</span><br><span class="line">            &#125;,</span><br><span class="line">            methods: &#123;</span><br><span class="line">                changeValue:function()&#123;</span><br><span class="line">                this.Value&#x3D;&quot;这是另一个样例&quot;;</span><br><span class="line">            &#125;</span><br><span class="line">            &#125;,</span><br><span class="line">        &#125;)</span><br><span class="line">    &lt;&#x2F;script&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>需要动态增删的class建议使用对象的方式</p>
-</blockquote>
-<hr>
-<h2 id="案例制作：图片切换"><a href="#案例制作：图片切换" class="headerlink" title="案例制作：图片切换"></a>案例制作：图片切换</h2><pre><code>一组图片轮流显示，有两颗翻页的按键，一颗向前，一颗向后，到翻页顶端点就消失，图片窗口显示图片
-
-&gt; 设计思路
-    &gt;&gt; 定义图片数组
-    &gt;&gt; 添加图片索引
-    &gt;&gt; 绑定src属性
-    &gt;&gt; 图片切换逻辑
-    &gt;&gt; 显示状态切换</code></pre><p>代码如下</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div id&#x3D;&quot;app&quot;&gt;</span><br><span class="line">        &lt;button @click&#x3D;&quot;before&quot; v-show&#x3D;&quot;isShowpre&quot;&gt;</span><br><span class="line">            上一张</span><br><span class="line">        &lt;&#x2F;button&gt;</span><br><span class="line">        &lt;img :src&#x3D;&quot;iSrc[index]&quot; alt&#x3D;&quot;loading...&quot;&gt;</span><br><span class="line">        &lt;button @click&#x3D;&quot;next&quot; v-show&#x3D;&quot;isShownext&quot;&gt;</span><br><span class="line">            下一张</span><br><span class="line">        &lt;&#x2F;button&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">   </span><br><span class="line">    &lt;script src&#x3D;&quot;https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;vue&#x2F;dist&#x2F;vue.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line">        var app &#x3D; new Vue(&#123;</span><br><span class="line">            el:&quot;#app&quot;,</span><br><span class="line">            data:&#123;</span><br><span class="line">                iSrc:[&quot;.&#x2F;img&#x2F;1.jpg&quot;,&quot;.&#x2F;img&#x2F;2.jpg&quot;,&quot;.&#x2F;img&#x2F;3.jpg&quot;],</span><br><span class="line">                index:0,</span><br><span class="line">                isShowpre:false,</span><br><span class="line">                isShownext:true</span><br><span class="line">            &#125;,</span><br><span class="line">            methods: &#123;</span><br><span class="line">                next:function()&#123;</span><br><span class="line">                    if(this.index&lt;this.iSrc.length-2)&#123;</span><br><span class="line">                       this.index &#x3D; this.index + 1 </span><br><span class="line">                       this.isShownext&#x3D;true</span><br><span class="line">                       this.isShowpre&#x3D;true</span><br><span class="line">                    &#125;else&#123;</span><br><span class="line">                        this.index &#x3D; this.index + 1 </span><br><span class="line">                        this.isShownext&#x3D;false</span><br><span class="line">                    &#125;</span><br><span class="line">                    </span><br><span class="line">                &#125;,</span><br><span class="line">                before:function()&#123;</span><br><span class="line">                    if(this.index&gt;1)&#123;</span><br><span class="line">                        this.index &#x3D; this.index - 1</span><br><span class="line">                        this.isShowpre&#x3D;true</span><br><span class="line">                        this.isShownext&#x3D;true</span><br><span class="line">                    &#125;else&#123;</span><br><span class="line">                        this.index &#x3D; this.index - 1</span><br><span class="line">                        this.isShowpre&#x3D;false</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;,</span><br><span class="line">        &#125;)</span><br><span class="line">    &lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
-<hr>
-<h3 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h3><blockquote>
-<p>列表数据使用数组保存</p>
-</blockquote>
-<blockquote>
-<p>v-bind用来设置元素属性</p>
-</blockquote>
-<blockquote>
-<p>v-show和v-if都用来切换元素显示状态，频繁切换用v-show</p>
-</blockquote>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/01/31/Vue%E6%9C%AC%E5%9C%B0%E5%BA%94%E7%94%A8(%E4%BA%8C)/" data-id="ck614jsvj0002k0u16xma2y2j" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-  
-    <article id="post-Vue本地应用(一)" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/01/31/Vue%E6%9C%AC%E5%9C%B0%E5%BA%94%E7%94%A8(%E4%B8%80)/" class="article-date">
-  <time datetime="2020-01-30T16:13:36.000Z" itemprop="datePublished">2020-01-31</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/01/31/Vue%E6%9C%AC%E5%9C%B0%E5%BA%94%E7%94%A8(%E4%B8%80)/">Vue本地应用(一)</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="本地应用Part1"><a href="#本地应用Part1" class="headerlink" title="本地应用Part1"></a>本地应用Part1</h1><h4 id="用vue操纵网页元素"><a href="#用vue操纵网页元素" class="headerlink" title="用vue操纵网页元素"></a>用vue操纵网页元素</h4><pre><code>- 通过Vue实现常见网页效果
-- 学习Vue指令，以案例巩固知识点
-- Vue指令是指v-开头的一组特殊语法</code></pre><hr>
-<h2 id="Vue-指令"><a href="#Vue-指令" class="headerlink" title="Vue 指令"></a>Vue 指令</h2><ol>
-<li>内容绑定，事件绑定<ul>
-<li>v-text</li>
-<li>v-html</li>
-<li>v-on基础</li>
-</ul>
-</li>
-<li>显示切换，属性绑定<ul>
-<li>v-show</li>
-<li>v-if</li>
-<li>v-mind</li>
-</ul>
-</li>
-<li>列表循环，表单元素绑定<ul>
-<li>v-for</li>
-<li>v-on补充</li>
-<li>v-model</li>
-</ul>
-</li>
-</ol>
-<hr>
-<h2 id="内容绑定，事件绑定"><a href="#内容绑定，事件绑定" class="headerlink" title="内容绑定，事件绑定"></a>内容绑定，事件绑定</h2><hr>
-<h3 id="v-text"><a href="#v-text" class="headerlink" title="v-text"></a>v-text</h3><p>——————设置标签的文本值(textContent)</p>
-<p>使用方法可以放在标签里面也可以放在内容里面，也可以像js一样连接字符串</p>
-<p>代码样例如下</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div id&#x3D;&quot;app&quot;&gt;</span><br><span class="line">        &lt;h2 v-text&#x3D;&quot;message&quot;&gt;&lt;&#x2F;h2&gt;</span><br><span class="line">        &lt;h2&gt;</span><br><span class="line">            插值表达的方法&#123;&#123;message&#125;&#125;</span><br><span class="line">        &lt;&#x2F;h2&gt;</span><br><span class="line">        &lt;h2&gt;&#123;&#123;message+&#39;!&#39;&#125;&#125;也可以加表达式&lt;&#x2F;h2&gt;</span><br><span class="line">   &lt;&#x2F;div&gt;</span><br><span class="line">   </span><br><span class="line">    &lt;script src&#x3D;&quot;https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;vue&#x2F;dist&#x2F;vue.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line">        var app &#x3D; new Vue(&#123;</span><br><span class="line">            el:&quot;#app&quot;,</span><br><span class="line">            data:&#123;</span><br><span class="line">                message:&quot;hello world!&quot;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">    &lt;&#x2F;script&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br></pre></td></tr></table></figure>
-<hr>
-<h3 id="v-html"><a href="#v-html" class="headerlink" title="v-html"></a>v-html</h3><p>——————设置标签的innerHTML</p>
-<pre><code>-内容中有html结构会被解析为标签</code></pre><p>P.S:如果单纯是文本的话，两者作用几乎相同，但是当输入html格式的时候，v-html就会被解析成html格式，v-text只会解析为文本</p>
-<p>样例代码如下</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div id&#x3D;&quot;app&quot;&gt;</span><br><span class="line">        &lt;h2 v-html&#x3D;&quot;content&quot;&gt;&lt;&#x2F;h2&gt;</span><br><span class="line">        &lt;h2 v-html&#x3D;&quot;html&quot;&gt;&lt;&#x2F;h2&gt;</span><br><span class="line">   &lt;&#x2F;div&gt;</span><br><span class="line">   </span><br><span class="line">    &lt;script src&#x3D;&quot;https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;vue&#x2F;dist&#x2F;vue.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line">        var app &#x3D; new Vue(&#123;</span><br><span class="line">            el:&quot;#app&quot;,</span><br><span class="line">            data:&#123;</span><br><span class="line">                content:&quot;hello world!&quot;,&#x2F;&#x2F;就没啥区别</span><br><span class="line">                html:&quot;&lt;a href&#x3D;&#39;#&#39;&gt;hello world!&lt;&#x2F;a&gt;&quot;&#x2F;&#x2F;这就被解析成了一个链接</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">    &lt;&#x2F;script&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br></pre></td></tr></table></figure>
-<hr>
-<h3 id="v-on"><a href="#v-on" class="headerlink" title="v-on"></a>v-on</h3><p>——————为元素绑定事件</p>
-<p>样例代码如下 </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div id&#x3D;&quot;app&quot;&gt;</span><br><span class="line">        &lt;input type&#x3D;&quot;button&quot; value&#x3D;&quot;单击触发&quot; v-on:click&#x3D;&quot;doit&quot;&gt;</span><br><span class="line">        &lt;input type&#x3D;&quot;button&quot; value&#x3D;&quot;双击触发&quot; v-on:dblclick&#x3D;&quot;doit&quot;&gt;</span><br><span class="line">        &lt;input type&#x3D;&quot;button&quot; value&#x3D;&quot;双击触发&quot; @dblclick&#x3D;&quot;doit&quot;&gt;</span><br><span class="line">        v-on:可以用@符号来代替，效果一样</span><br><span class="line">   &lt;&#x2F;div&gt;</span><br><span class="line">   </span><br><span class="line">    &lt;script src&#x3D;&quot;https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;vue&#x2F;dist&#x2F;vue.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line">        var app &#x3D; new Vue(&#123;</span><br><span class="line">            el:&quot;#app&quot;,</span><br><span class="line">            methods:&#123;</span><br><span class="line">                doit:function()&#123;</span><br><span class="line">                    alert(&quot;hello world!&quot;)</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">    &lt;&#x2F;script&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br></pre></td></tr></table></figure>
-<h4 id="v-on-可以用-符号来代替，效果一样，正如代码中两个双击触发的效果是一样的"><a href="#v-on-可以用-符号来代替，效果一样，正如代码中两个双击触发的效果是一样的" class="headerlink" title="v-on:可以用@符号来代替，效果一样，正如代码中两个双击触发的效果是一样的"></a>v-on:可以用@符号来代替，效果一样，正如代码中两个双击触发的效果是一样的</h4><p>在Vue中可以改变页面形式，不通过操纵dom元素来执行</p>
-<p>Vue开发有个特点，页面由数据生成，数据改变，页面会同步改变，所以我们只需要修改数据即可</p>
-<p>代码示例如下</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div id&#x3D;&quot;app&quot;&gt;</span><br><span class="line">        &lt;h2 @click&#x3D;&quot;changeFood&quot;&gt;&#123;&#123;food&#125;&#125;&lt;&#x2F;h2&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">   </span><br><span class="line">    &lt;script src&#x3D;&quot;https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;vue&#x2F;dist&#x2F;vue.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line">        var app &#x3D; new Vue(&#123;</span><br><span class="line">            el:&quot;#app&quot;,</span><br><span class="line">            data:&#123;</span><br><span class="line">                food:&quot;水饺&quot;</span><br><span class="line">            &#125;,</span><br><span class="line">            methods:&#123;</span><br><span class="line">                changeFood:function()&#123;</span><br><span class="line">                    console.log(this.food);</span><br><span class="line">                    this.food+&#x3D;&quot;好吃嗷！&quot;;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)</span><br><span class="line">    &lt;&#x2F;script&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br></pre></td></tr></table></figure>
-<p>备注：</p>
-<pre><code>- 指令可以简写为@
-- 绑定的方法写在methods属性中
-- 方法内部通过this可以访问到定义在data中的数据</code></pre><hr>
-<h2 id="案例制作：计数器"><a href="#案例制作：计数器" class="headerlink" title="案例制作：计数器"></a>案例制作：计数器</h2><pre><code>项目要求：
-按加号递增，按减号递减，有上限为10，下限为0，到达极限则会跳出提示框</code></pre><p>代码如下</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div id&#x3D;&quot;app&quot;&gt;</span><br><span class="line">        &lt;button @click&#x3D;&quot;minus&quot;&gt;-&lt;&#x2F;button&gt;</span><br><span class="line">        &lt;span&gt;&#123;&#123;counterdata&#125;&#125;&lt;&#x2F;span&gt;</span><br><span class="line">        &lt;button @click&#x3D;&quot;add&quot;&gt;+&lt;&#x2F;button&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">    &lt;script src&#x3D;&quot;https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;vue&#x2F;dist&#x2F;vue.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line">        var app &#x3D; new Vue(&#123;</span><br><span class="line">            el:&quot;#app&quot;,</span><br><span class="line">            data:&#123;</span><br><span class="line">                counterdata:0</span><br><span class="line">            &#125;,</span><br><span class="line">            methods: &#123;</span><br><span class="line">                add:function()&#123;</span><br><span class="line">                    if(this.counterdata&lt;10)&#123;</span><br><span class="line">                        this.counterdata&#x3D;this.counterdata+1;</span><br><span class="line">                    &#125;else&#123;</span><br><span class="line">                        console.log(&quot;到上限了！&quot;)</span><br><span class="line">                    &#125;</span><br><span class="line">                    </span><br><span class="line">                &#125;,</span><br><span class="line">                minus:function()&#123;</span><br><span class="line">                    if(this.counterdata&gt;0)&#123;</span><br><span class="line">                        this.counterdata&#x3D;this.counterdata-1;</span><br><span class="line">                    &#125;else&#123;</span><br><span class="line">                        console.log(&quot;到下限了！&quot;)</span><br><span class="line">                    &#125;   </span><br><span class="line">                &#125;</span><br><span class="line">            &#125;,</span><br><span class="line">        &#125;)</span><br><span class="line">    &lt;&#x2F;script&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br></pre></td></tr></table></figure>
-<hr>
-<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><pre><code>- 创建Vue示例时：el(挂载点)，data(数据)，methons(方法)
-- v-on作用为绑定事件，可简写为@
-- 方法中通过this获取此Vue示例中data中的数据
-- v-text用于设置元素的文本值
-- v-html用于设置元素的innerHTML</code></pre>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/01/31/Vue%E6%9C%AC%E5%9C%B0%E5%BA%94%E7%94%A8(%E4%B8%80)/" data-id="ck614jsvi0001k0u1dcfb1p46" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-Vue基础" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/01/30/Vue%E5%9F%BA%E7%A1%80/" class="article-date">
-  <time datetime="2020-01-30T12:42:41.000Z" itemprop="datePublished">2020-01-30</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/01/30/Vue%E5%9F%BA%E7%A1%80/">Vue基础</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><a href="https://cn.vuejs.org" target="_blank" rel="noopener">vue官方文档download</a></p>
-<hr>
-<h2 id="第一个Vue程序"><a href="#第一个Vue程序" class="headerlink" title="第一个Vue程序"></a>第一个Vue程序</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div id&#x3D;&quot;app&quot;&gt;</span><br><span class="line">        &#123;&#123;message&#125;&#125;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line"></span><br><span class="line">    &lt;script src&#x3D;&quot;https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;vue&#x2F;dist&#x2F;vue.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line">    var app &#x3D; new Vue(&#123;</span><br><span class="line">        el:&quot;#app&quot;,</span><br><span class="line">        data:&#123;</span><br><span class="line">            message:&quot;hello Vue!&quot;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">    &lt;&#x2F;script&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br></pre></td></tr></table></figure>
-<ol>
-<li><p>导入开发版本的Vue.js</p>
-</li>
-<li><p>创建Vue实例对象，设置el属性和data属性</p>
-</li>
-<li><p>使用简洁的模板语法把数据渲染到页面上</p>
-</li>
-</ol>
-<hr>
-<h2 id="el-挂载点"><a href="#el-挂载点" class="headerlink" title="el:挂载点"></a>el:挂载点</h2><h4 id="el是用来设置Vue实力挂载（管理）的元素"><a href="#el是用来设置Vue实力挂载（管理）的元素" class="headerlink" title="el是用来设置Vue实力挂载（管理）的元素"></a>el是用来设置Vue实力挂载（管理）的元素</h4><ol>
-<li><p>VUE示例作用的范围是什么？</p>
-<ul>
-<li>Vue会管理el选项命中的元素以及内部的后代元素，及 必须在el：挂载点的内部</li>
-</ul>
-</li>
-<li><p>是否可以使用其他选择器</p>
-<ul>
-<li>可以使用其他选择器，但是推荐使用id选择器</li>
-</ul>
-</li>
-<li><p>是否可以设计其他的dom元素</p>
-<ul>
-<li><p>大部分都行，但是在 &#60;html&#62;和&#60;body&#62;标签内不可以</p>
-</li>
-<li><p>建议使用div标签 因为其他标签大多有其他自己的样式</p>
-</li>
-</ul>
-</li>
-</ol>
-<p>样例代码</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">     &#123;&#123;message&#125;&#125;&lt;!--范围测试 --&gt;</span><br><span class="line">    &lt;span&gt;&#123;&#123;message&#125;&#125;&lt;&#x2F;span&gt;&lt;!--范围测试--&gt;</span><br><span class="line">    &lt;div id&#x3D;&quot;app&quot; class&#x3D;&quot;app&quot;&gt;</span><br><span class="line">        &#123;&#123;message&#125;&#125;&lt;!--范围测试--&gt;</span><br><span class="line">        &lt;span&gt;&#123;&#123;message&#125;&#125;&lt;&#x2F;span&gt;&lt;!--范围测试--&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">    可以使用其他标签</span><br><span class="line">    &lt;!-- &lt;h2 id&#x3D;&quot;app&quot; class&#x3D;&quot;app&quot;&gt;</span><br><span class="line">        &#123;&#123;message&#125;&#125; 范围测试</span><br><span class="line">        &lt;span&gt;&#123;&#123;message&#125;&#125;&lt;&#x2F;span&gt;范围测试</span><br><span class="line">    &lt;&#x2F;h2&gt;    --&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &lt;script src&#x3D;&quot;https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;vue&#x2F;dist&#x2F;vue.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line">    var app &#x3D; new Vue(&#123;</span><br><span class="line">        el:&quot;#app&quot;,&#x2F;&#x2F;默认id选择器</span><br><span class="line">        &#x2F;&#x2F;el:&quot;.app&quot;,&#x2F;&#x2F;class选择器也可以用</span><br><span class="line">        &#x2F;&#x2F;el:&quot;div&quot;，&#x2F;&#x2F;标签选择器也可以用</span><br><span class="line">        data:&#123;</span><br><span class="line">            message:&quot;hello Vue!&quot;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">    &lt;&#x2F;script&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br></pre></td></tr></table></figure>
-<hr>
-<h2 id="data-数据对象"><a href="#data-数据对象" class="headerlink" title="data:数据对象"></a>data:数据对象</h2><ul>
-<li>Vue中用到的数据定义在data中</li>
-<li>data中可以写复杂类型的数据</li>
-<li>渲染复杂类型的数据时，遵循js语法即可</li>
-</ul>
-<p>样例测试代码</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div id&#x3D;&quot;app&quot;&gt;</span><br><span class="line">        &lt;span&gt;不同的获取方式&lt;&#x2F;span&gt;&lt;br&gt;</span><br><span class="line">        &#123;&#123;message&#125;&#125;</span><br><span class="line">        &lt;h2&gt;&#123;&#123;school.weibo&#125;&#125;&lt;&#x2F;h2&gt;</span><br><span class="line">        &lt;h2&gt;&#123;&#123;school.name&#125;&#125;&lt;&#x2F;h2&gt;</span><br><span class="line">        &lt;ul&gt;</span><br><span class="line">            &lt;li&gt;&#123;&#123;array_test[0]&#125;&#125;&lt;&#x2F;li&gt;</span><br><span class="line">        &lt;&#x2F;ul&gt;</span><br><span class="line"></span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line"></span><br><span class="line">    &lt;script src&#x3D;&quot;https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;vue&#x2F;dist&#x2F;vue.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line">        var app &#x3D; new Vue(&#123;</span><br><span class="line">            el:&quot;#app&quot;,</span><br><span class="line">            data:&#123;</span><br><span class="line">                message:&quot;hello world!&quot;,</span><br><span class="line">                school:&#123;</span><br><span class="line">                    name:&quot;Oliver&quot;,</span><br><span class="line">                    weibo:&quot;weibo:@一个喜欢梅西的钢铁侠&quot;,</span><br><span class="line">                    bilibili:&quot;bilibili:一个喜欢梅西的钢铁侠&quot;</span><br><span class="line">                &#125;,</span><br><span class="line">                array_test:[&quot;QQ&quot;,&quot;WeChat&quot;]</span><br><span class="line">            &#125;,</span><br><span class="line"></span><br><span class="line">        &#125;)</span><br><span class="line">    &lt;&#x2F;script&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/01/30/Vue%E5%9F%BA%E7%A1%80/" data-id="ck615bywn00008ou1fl908nkq" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-新年快乐" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/01/24/%E6%96%B0%E5%B9%B4%E5%BF%AB%E4%B9%90/" class="article-date">
-  <time datetime="2020-01-24T13:36:56.000Z" itemprop="datePublished">2020-01-24</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/01/24/%E6%96%B0%E5%B9%B4%E5%BF%AB%E4%B9%90/">新年快乐</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="哥哥姐姐新年好"><a href="#哥哥姐姐新年好" class="headerlink" title="哥哥姐姐新年好"></a>哥哥姐姐新年好</h2><h2 id="微信还是支付宝"><a href="#微信还是支付宝" class="headerlink" title="微信还是支付宝"></a>微信还是支付宝</h2><hr>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/01/24/%E6%96%B0%E5%B9%B4%E5%BF%AB%E4%B9%90/" data-id="ck614jsvr0004k0u146m17rb6" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-welcome" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/01/22/welcome/" class="article-date">
-  <time datetime="2020-01-22T10:45:24.000Z" itemprop="datePublished">2020-01-22</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/01/22/welcome/">welcome</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="welcome-to-Oliver’s-personal-blog"><a href="#welcome-to-Oliver’s-personal-blog" class="headerlink" title="welcome to Oliver’s personal blog"></a>welcome to Oliver’s personal blog</h2><h2 id="weibo-bilibili-一个喜欢梅西的钢铁侠"><a href="#weibo-bilibili-一个喜欢梅西的钢铁侠" class="headerlink" title="weibo/bilibili:@一个喜欢梅西的钢铁侠"></a>weibo/bilibili:@一个喜欢梅西的钢铁侠</h2>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/01/22/welcome/" data-id="ck614jsvk0003k0u14n9u7igm" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-
 
 </section>
         
