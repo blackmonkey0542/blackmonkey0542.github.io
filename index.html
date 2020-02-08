@@ -64,6 +64,100 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-vector笔记" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/02/08/vector%E7%AC%94%E8%AE%B0/" class="article-date">
+  <time datetime="2020-02-08T13:58:40.000Z" itemprop="datePublished">2020-02-08</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/02/08/vector%E7%AC%94%E8%AE%B0/">vector笔记</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ol>
+<li><p>声明：</p>
+<ul>
+<li><p>一个vector类似于一个动态的动态数组</p>
+</li>
+<li><p>vector中可以存在重复的元素</p>
+</li>
+<li><p>vector&lt;int&gt; a;//声明一个元素为int类型的vector a</p>
+</li>
+<li><p>vector&lt;MyType&gt; a;//声明一个元素为MyType的vector a</p>
+<h4 id="p-s-之前声明的a包含0个元素，即a-size-的值为0，但是它是动态的，其大小会随着数据的插入和删除的改变而改变"><a href="#p-s-之前声明的a包含0个元素，即a-size-的值为0，但是它是动态的，其大小会随着数据的插入和删除的改变而改变" class="headerlink" title="p.s:之前声明的a包含0个元素，即a.size()的值为0，但是它是动态的，其大小会随着数据的插入和删除的改变而改变"></a>p.s:之前声明的a包含0个元素，即a.size()的值为0，但是它是动态的，其大小会随着数据的插入和删除的改变而改变</h4></li>
+<li><p>vector&lt;int&gt; a(100,a);//这里声明的是一个已经存放了100个0的整数的vector</p>
+</li>
+</ul>
+</li>
+<li><p>向量操作</p>
+</li>
+</ol>
+<ul>
+<li><p>常用函数</p>
+<ul>
+<li>a.size();//返回vector的大小，即包含的元素个数 </li>
+<li>a.pop_back();//删除vector末尾的元素，vector的大小相应减1</li>
+<li>a.push_back();//用于在vector的末尾添加元素</li>
+<li>a.back();//返回vector末尾的元素</li>
+<li>a.clear;//将vector清空，vector的大小变为0</li>
+</ul>
+</li>
+<li><p>其他访问方式</p>
+<ul>
+<li>cout&lt;&lt;a[5]&lt;&lt;endl;</li>
+<li>cout&lt;&lt;a.at(5)&lt;&lt;endl;<h4 id="以上的区别在于后者在访问越界时会抛出一场，而前者不会"><a href="#以上的区别在于后者在访问越界时会抛出一场，而前者不会" class="headerlink" title="以上的区别在于后者在访问越界时会抛出一场，而前者不会"></a>以上的区别在于后者在访问越界时会抛出一场，而前者不会</h4></li>
+</ul>
+</li>
+</ul>
+<ol start="3">
+<li>函数汇总<ul>
+<li>size()  得到vector的大小，即包含的元素个数 </li>
+<li>pop_back()  删除vector末尾的元素，vector的大小相应减1</li>
+<li>push_back()  用于在vector的末尾添加元素</li>
+<li>back()  得到vector末尾的元素</li>
+<li>clear()  将vector清空，vector的大小变为0</li>
+<li>at()  得到编号位置的数组</li>
+<li>begin()  得到数组头的指针</li>
+<li>end()  得到数组的最后一个单元+1的指针</li>
+<li>front()  得到数组头的引用</li>
+<li>max_size()  得到vector最大可以是多大</li>
+<li>capacity()  当前vector分配的大小</li>
+<li>resize()  改变当前使用数据的大小，如果他比当前使用的大，则填充默认值</li>
+<li>reserve()  改变当前vector所分配的空间大小</li>
+<li>erase()  删除指针指向的数据项</li>
+<li>rbegin()  将vector反转后的开始指针返回(其实就是原来的end-1)</li>
+<li>rend()  将vector反转后的结束指针返回(其实就是原来的begin-1)</li>
+<li>empty()  判断vector是否为空</li>
+<li>swap()  与另一个vector交换数据</li>
+</ul>
+</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/02/08/vector%E7%AC%94%E8%AE%B0/" data-id="ck6do0b8l0000sgu1hphec6vm" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-jQuery部分介绍-一" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/02/07/jQuery%E9%83%A8%E5%88%86%E4%BB%8B%E7%BB%8D-%E4%B8%80/" class="article-date">
@@ -884,6 +978,10 @@ HTML 标签通常是成对出现的，比如 &lt;b&gt; 和 &lt;/b&gt;
       <ul>
         
           <li>
+            <a href="/2020/02/08/vector%E7%AC%94%E8%AE%B0/">vector笔记</a>
+          </li>
+        
+          <li>
             <a href="/2020/02/07/jQuery%E9%83%A8%E5%88%86%E4%BB%8B%E7%BB%8D-%E4%B8%80/">jQuery部分介绍(一)</a>
           </li>
         
@@ -897,10 +995,6 @@ HTML 标签通常是成对出现的，比如 &lt;b&gt; 和 &lt;/b&gt;
         
           <li>
             <a href="/2020/02/02/Vue%E6%9C%AC%E5%9C%B0%E5%BA%94%E7%94%A8-%E4%B8%89/">Vue本地应用(三)</a>
-          </li>
-        
-          <li>
-            <a href="/2020/01/31/Vue%E6%9C%AC%E5%9C%B0%E5%BA%94%E7%94%A8(%E4%BA%8C)/">Vue本地应用(二)</a>
           </li>
         
       </ul>
