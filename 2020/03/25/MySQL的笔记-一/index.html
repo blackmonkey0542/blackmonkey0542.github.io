@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>MySQL的笔记(一) | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="MySQL大多数据库基于标准的SQL标准 select 语句 AS语句的用法： select &amp;apos;XXX&amp;apos; as xxx,        &amp;apos;YYY&amp;apos; as yyy; CONCAT 连接字符串    :CONCAT(&#96;A&#96;, &#96;B&#96;) AS C;concat会在遇到NULL的时候就把整个字符串变为NULL即 NULL + ‘string’ &#x3D; NULL,所以利用">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MySQL的笔记(一)">
+<meta property="og:url" content="http://yoursite.com/2020/03/25/MySQL%E7%9A%84%E7%AC%94%E8%AE%B0-%E4%B8%80/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="MySQL大多数据库基于标准的SQL标准 select 语句 AS语句的用法： select &amp;apos;XXX&amp;apos; as xxx,        &amp;apos;YYY&amp;apos; as yyy; CONCAT 连接字符串    :CONCAT(&#96;A&#96;, &#96;B&#96;) AS C;concat会在遇到NULL的时候就把整个字符串变为NULL即 NULL + ‘string’ &#x3D; NULL,所以利用">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-03-25T15:41:29.000Z">
+<meta property="article:modified_time" content="2020-03-25T15:42:27.005Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-MySQL的笔记-一" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/03/25/MySQL%E7%9A%84%E7%AC%94%E8%AE%B0-%E4%B8%80/" class="article-date">
+  <time datetime="2020-03-25T15:41:29.000Z" itemprop="datePublished">2020-03-25</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      MySQL的笔记(一)
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="MySQL"><a href="#MySQL" class="headerlink" title="MySQL"></a>MySQL</h1><p>大多数据库基于标准的SQL标准</p>
+<h2 id="select-语句"><a href="#select-语句" class="headerlink" title="select 语句"></a>select 语句</h2><ol>
+<li><p>AS语句的用法：</p>
+<pre><code>select &apos;XXX&apos; as xxx,
+       &apos;YYY&apos; as yyy;</code></pre><blockquote>
+<p>CONCAT 连接字符串    :CONCAT(`A`, `B`) AS C;concat会在遇到NULL的时候就把整个字符串变为NULL<br>即 NULL + ‘string’ = NULL,所以利用IFNULL进行一个转义的操作. CONCAT(<br> `A`,<br> ‘.’,`B`,<br> ‘.’,IFNULL(`C`,0),<br> ‘.’,IFNULL(`D`,0),<br> ‘.’,IFNULL(`E`,0),<br> ‘.’,IFNULL(`F`,0));</p>
+</blockquote>
+</li>
+</ol>
+<blockquote>
+<p>distint去重：SELECT DISTINCT `department_id` ;</p>
+</blockquote>
+<ol start="2">
+<li>条件：</li>
+</ol>
+<ul>
+<li><p>和VB一样啊….就&gt; &lt; = != &gt;= &lt;=</p>
+<p> -where  i&lt;&gt;10</p>
+</li>
+</ul>
+<ol start="3">
+<li><p>逻辑 </p>
+<ul>
+<li>这个和vb或者c就不一样了(and or not)</li>
+<li>while A and B(差不多就是这个用法)<h2 id="筛选的另外一些办法"><a href="#筛选的另外一些办法" class="headerlink" title="筛选的另外一些办法"></a>筛选的另外一些办法</h2></li>
+</ul>
+</li>
+</ol>
+<ul>
+<li><p>通配符%(任意数量)_(一个字符) ：WHERE `A` LIKE &#39;%b%&#39;;</p>
+<blockquote>
+<p>where A = ‘a’ or A = ‘b’ or A = ‘c’;<br>和一样的<br>where A in(‘a’,’b’,’c’);</p>
+</blockquote>
+</li>
+<li><p>判断是否为空：</p>
+<ul>
+<li>where `A` IS NOT NULL</li>
+<li>where `A` IS NULL</li>
+<li>where `A` &lt;=&gt; NULL</li>
+</ul>
+</li>
+<li><p>升降序的办法</p>
+<ul>
+<li><p>ORDER BY salary ASC;</p>
+<ul>
+<li>ascend 升序 </li>
+</ul>
+</li>
+<li><p>ORDER BY salary DASC;</p>
+<ul>
+<li>descend 降序<h2 id="长度LENGTH（）"><a href="#长度LENGTH（）" class="headerlink" title="长度LENGTH（）"></a>长度LENGTH（）</h2>可以用来统计字符串长度啥的，然后对其进行排序，比如：order by length(A) ASC;</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="阮老板的参考还有好多，想看详细的点点看呗"><a href="#阮老板的参考还有好多，想看详细的点点看呗" class="headerlink" title="阮老板的参考还有好多，想看详细的点点看呗"></a><a href="https://blog.csdn.net/weixin_43178828/article/details/104077900" target="_blank" rel="noopener">阮老板的参考还有好多，想看详细的点点看呗</a></h1><ul>
+<li><p>常用字符串函数 SUBSTR REPLACE INSERT 里面都有</p>
+</li>
+<li><p>TRIM函数：去空格的函数</p>
+<p>  TRIM(string)    trim    修剪    去掉string左右两边的空格</p>
+<p>  LTRIM(string)    left trim    修剪    去掉string左边的空格</p>
+<p>  RTRIM(string)    right trim    修剪    去掉string右边的空格</p>
+<p>  TRIM( childStr FROM string)    trim    修剪    去掉string左右两边的子串childStr</p>
+<p>  TRIM(LEADING childStr FROM string)    LEADING    领先的    去掉string前边的子串childStr</p>
+<p>  TRIM(TRAILING childStr FROM string)    TRAILING    末尾的    去掉string后边的子串childStr</p>
+</li>
+<li><p>PAD函数(用来补字符串)：<br>  LPAD(str, len, pad)    left    左边    用字符串pad对str最左边进行填充，直到str的长度为len个字符</p>
+<p>  RPAD(str ,len, pad)    right    右边    用字符串pad对str最右边进行填充，直到str的长度为len个字符</p>
+</li>
+</ul>
+<h1 id="先看到这吧————毕竟我一晚上也才看了十节"><a href="#先看到这吧————毕竟我一晚上也才看了十节" class="headerlink" title="先看到这吧————毕竟我一晚上也才看了十节"></a>先看到这吧————毕竟我一晚上也才看了十节</h1><h2 id="阮老板的csdn救我…你们要看详细版你们就看他的那个链接上面有"><a href="#阮老板的csdn救我…你们要看详细版你们就看他的那个链接上面有" class="headerlink" title="阮老板的csdn救我…你们要看详细版你们就看他的那个链接上面有"></a>阮老板的csdn救我…你们要看详细版你们就看他的那个链接上面有</h2><h1 id="微博-b站：一个喜欢梅西的钢铁侠"><a href="#微博-b站：一个喜欢梅西的钢铁侠" class="headerlink" title="微博/b站：一个喜欢梅西的钢铁侠"></a>微博/b站：一个喜欢梅西的钢铁侠</h1><pre><code>顶级沙雕，关注一下呗♥</code></pre>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/03/25/MySQL%E7%9A%84%E7%AC%94%E8%AE%B0-%E4%B8%80/" data-id="ck87hye1c0000ocu1flqlfvsn" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2020/02/17/%E7%B2%BE%E5%AF%86%E4%BB%AA%E5%99%A8%E8%AE%BE%E8%AE%A1%E2%80%94%E2%80%94%E5%B8%A6%E4%BC%A0%E5%8A%A8%E6%A6%82%E8%BF%B0/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">精密仪器设计——带传动 概述</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/03/25/MySQL%E7%9A%84%E7%AC%94%E8%AE%B0-%E4%B8%80/">MySQL的笔记(一)</a>
+          </li>
+        
+          <li>
+            <a href="/2020/02/17/%E7%B2%BE%E5%AF%86%E4%BB%AA%E5%99%A8%E8%AE%BE%E8%AE%A1%E2%80%94%E2%80%94%E5%B8%A6%E4%BC%A0%E5%8A%A8%E6%A6%82%E8%BF%B0/">精密仪器设计——带传动 概述</a>
+          </li>
+        
+          <li>
+            <a href="/2020/02/09/c-map%E7%AC%94%E8%AE%B0/">map笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2020/02/08/vector%E7%AC%94%E8%AE%B0/">vector笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2020/02/07/jQuery%E9%83%A8%E5%88%86%E4%BB%8B%E7%BB%8D-%E4%B8%80/">jQuery部分介绍(一)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

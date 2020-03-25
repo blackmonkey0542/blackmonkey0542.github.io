@@ -64,6 +64,113 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-MySQL的笔记-一" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/03/25/MySQL%E7%9A%84%E7%AC%94%E8%AE%B0-%E4%B8%80/" class="article-date">
+  <time datetime="2020-03-25T15:41:29.000Z" itemprop="datePublished">2020-03-25</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/03/25/MySQL%E7%9A%84%E7%AC%94%E8%AE%B0-%E4%B8%80/">MySQL的笔记(一)</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="MySQL"><a href="#MySQL" class="headerlink" title="MySQL"></a>MySQL</h1><p>大多数据库基于标准的SQL标准</p>
+<h2 id="select-语句"><a href="#select-语句" class="headerlink" title="select 语句"></a>select 语句</h2><ol>
+<li><p>AS语句的用法：</p>
+<pre><code>select &apos;XXX&apos; as xxx,
+       &apos;YYY&apos; as yyy;</code></pre><blockquote>
+<p>CONCAT 连接字符串    :CONCAT(`A`, `B`) AS C;concat会在遇到NULL的时候就把整个字符串变为NULL<br>即 NULL + ‘string’ = NULL,所以利用IFNULL进行一个转义的操作. CONCAT(<br> `A`,<br> ‘.’,`B`,<br> ‘.’,IFNULL(`C`,0),<br> ‘.’,IFNULL(`D`,0),<br> ‘.’,IFNULL(`E`,0),<br> ‘.’,IFNULL(`F`,0));</p>
+</blockquote>
+</li>
+</ol>
+<blockquote>
+<p>distint去重：SELECT DISTINCT `department_id` ;</p>
+</blockquote>
+<ol start="2">
+<li>条件：</li>
+</ol>
+<ul>
+<li><p>和VB一样啊….就&gt; &lt; = != &gt;= &lt;=</p>
+<p> -where  i&lt;&gt;10</p>
+</li>
+</ul>
+<ol start="3">
+<li><p>逻辑 </p>
+<ul>
+<li>这个和vb或者c就不一样了(and or not)</li>
+<li>while A and B(差不多就是这个用法)<h2 id="筛选的另外一些办法"><a href="#筛选的另外一些办法" class="headerlink" title="筛选的另外一些办法"></a>筛选的另外一些办法</h2></li>
+</ul>
+</li>
+</ol>
+<ul>
+<li><p>通配符%(任意数量)_(一个字符) ：WHERE `A` LIKE &#39;%b%&#39;;</p>
+<blockquote>
+<p>where A = ‘a’ or A = ‘b’ or A = ‘c’;<br>和一样的<br>where A in(‘a’,’b’,’c’);</p>
+</blockquote>
+</li>
+<li><p>判断是否为空：</p>
+<ul>
+<li>where `A` IS NOT NULL</li>
+<li>where `A` IS NULL</li>
+<li>where `A` &lt;=&gt; NULL</li>
+</ul>
+</li>
+<li><p>升降序的办法</p>
+<ul>
+<li><p>ORDER BY salary ASC;</p>
+<ul>
+<li>ascend 升序 </li>
+</ul>
+</li>
+<li><p>ORDER BY salary DASC;</p>
+<ul>
+<li>descend 降序<h2 id="长度LENGTH（）"><a href="#长度LENGTH（）" class="headerlink" title="长度LENGTH（）"></a>长度LENGTH（）</h2>可以用来统计字符串长度啥的，然后对其进行排序，比如：order by length(A) ASC;</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="阮老板的参考还有好多，想看详细的点点看呗"><a href="#阮老板的参考还有好多，想看详细的点点看呗" class="headerlink" title="阮老板的参考还有好多，想看详细的点点看呗"></a><a href="https://blog.csdn.net/weixin_43178828/article/details/104077900" target="_blank" rel="noopener">阮老板的参考还有好多，想看详细的点点看呗</a></h1><ul>
+<li><p>常用字符串函数 SUBSTR REPLACE INSERT 里面都有</p>
+</li>
+<li><p>TRIM函数：去空格的函数</p>
+<p>  TRIM(string)    trim    修剪    去掉string左右两边的空格</p>
+<p>  LTRIM(string)    left trim    修剪    去掉string左边的空格</p>
+<p>  RTRIM(string)    right trim    修剪    去掉string右边的空格</p>
+<p>  TRIM( childStr FROM string)    trim    修剪    去掉string左右两边的子串childStr</p>
+<p>  TRIM(LEADING childStr FROM string)    LEADING    领先的    去掉string前边的子串childStr</p>
+<p>  TRIM(TRAILING childStr FROM string)    TRAILING    末尾的    去掉string后边的子串childStr</p>
+</li>
+<li><p>PAD函数(用来补字符串)：<br>  LPAD(str, len, pad)    left    左边    用字符串pad对str最左边进行填充，直到str的长度为len个字符</p>
+<p>  RPAD(str ,len, pad)    right    右边    用字符串pad对str最右边进行填充，直到str的长度为len个字符</p>
+</li>
+</ul>
+<h1 id="先看到这吧————毕竟我一晚上也才看了十节"><a href="#先看到这吧————毕竟我一晚上也才看了十节" class="headerlink" title="先看到这吧————毕竟我一晚上也才看了十节"></a>先看到这吧————毕竟我一晚上也才看了十节</h1><h2 id="阮老板的csdn救我…你们要看详细版你们就看他的那个链接上面有"><a href="#阮老板的csdn救我…你们要看详细版你们就看他的那个链接上面有" class="headerlink" title="阮老板的csdn救我…你们要看详细版你们就看他的那个链接上面有"></a>阮老板的csdn救我…你们要看详细版你们就看他的那个链接上面有</h2><h1 id="微博-b站：一个喜欢梅西的钢铁侠"><a href="#微博-b站：一个喜欢梅西的钢铁侠" class="headerlink" title="微博/b站：一个喜欢梅西的钢铁侠"></a>微博/b站：一个喜欢梅西的钢铁侠</h1><pre><code>顶级沙雕，关注一下呗♥</code></pre>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/03/25/MySQL%E7%9A%84%E7%AC%94%E8%AE%B0-%E4%B8%80/" data-id="ck87hye1c0000ocu1flqlfvsn" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-精密仪器设计——带传动概述" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/02/17/%E7%B2%BE%E5%AF%86%E4%BB%AA%E5%99%A8%E8%AE%BE%E8%AE%A1%E2%80%94%E2%80%94%E5%B8%A6%E4%BC%A0%E5%8A%A8%E6%A6%82%E8%BF%B0/" class="article-date">
@@ -963,84 +1070,6 @@ HTML 标签通常是成对出现的，比如 &lt;b&gt; 和 &lt;/b&gt;
 
 
   
-    <article id="post-Vue基础" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/01/30/Vue%E5%9F%BA%E7%A1%80/" class="article-date">
-  <time datetime="2020-01-30T12:42:41.000Z" itemprop="datePublished">2020-01-30</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/01/30/Vue%E5%9F%BA%E7%A1%80/">Vue基础</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><a href="https://cn.vuejs.org" target="_blank" rel="noopener">vue官方文档download</a></p>
-<hr>
-<h2 id="第一个Vue程序"><a href="#第一个Vue程序" class="headerlink" title="第一个Vue程序"></a>第一个Vue程序</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div id&#x3D;&quot;app&quot;&gt;</span><br><span class="line">        &#123;&#123;message&#125;&#125;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line"></span><br><span class="line">    &lt;script src&#x3D;&quot;https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;vue&#x2F;dist&#x2F;vue.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line">    var app &#x3D; new Vue(&#123;</span><br><span class="line">        el:&quot;#app&quot;,</span><br><span class="line">        data:&#123;</span><br><span class="line">            message:&quot;hello Vue!&quot;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">    &lt;&#x2F;script&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br></pre></td></tr></table></figure>
-<ol>
-<li><p>导入开发版本的Vue.js</p>
-</li>
-<li><p>创建Vue实例对象，设置el属性和data属性</p>
-</li>
-<li><p>使用简洁的模板语法把数据渲染到页面上</p>
-</li>
-</ol>
-<hr>
-<h2 id="el-挂载点"><a href="#el-挂载点" class="headerlink" title="el:挂载点"></a>el:挂载点</h2><h4 id="el是用来设置Vue实力挂载（管理）的元素"><a href="#el是用来设置Vue实力挂载（管理）的元素" class="headerlink" title="el是用来设置Vue实力挂载（管理）的元素"></a>el是用来设置Vue实力挂载（管理）的元素</h4><ol>
-<li><p>VUE示例作用的范围是什么？</p>
-<ul>
-<li>Vue会管理el选项命中的元素以及内部的后代元素，及 必须在el：挂载点的内部</li>
-</ul>
-</li>
-<li><p>是否可以使用其他选择器</p>
-<ul>
-<li>可以使用其他选择器，但是推荐使用id选择器</li>
-</ul>
-</li>
-<li><p>是否可以设计其他的dom元素</p>
-<ul>
-<li><p>大部分都行，但是在 &#60;html&#62;和&#60;body&#62;标签内不可以</p>
-</li>
-<li><p>建议使用div标签 因为其他标签大多有其他自己的样式</p>
-</li>
-</ul>
-</li>
-</ol>
-<p>样例代码</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">     &#123;&#123;message&#125;&#125;&lt;!--范围测试 --&gt;</span><br><span class="line">    &lt;span&gt;&#123;&#123;message&#125;&#125;&lt;&#x2F;span&gt;&lt;!--范围测试--&gt;</span><br><span class="line">    &lt;div id&#x3D;&quot;app&quot; class&#x3D;&quot;app&quot;&gt;</span><br><span class="line">        &#123;&#123;message&#125;&#125;&lt;!--范围测试--&gt;</span><br><span class="line">        &lt;span&gt;&#123;&#123;message&#125;&#125;&lt;&#x2F;span&gt;&lt;!--范围测试--&gt;</span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line">    可以使用其他标签</span><br><span class="line">    &lt;!-- &lt;h2 id&#x3D;&quot;app&quot; class&#x3D;&quot;app&quot;&gt;</span><br><span class="line">        &#123;&#123;message&#125;&#125; 范围测试</span><br><span class="line">        &lt;span&gt;&#123;&#123;message&#125;&#125;&lt;&#x2F;span&gt;范围测试</span><br><span class="line">    &lt;&#x2F;h2&gt;    --&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    &lt;script src&#x3D;&quot;https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;vue&#x2F;dist&#x2F;vue.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line">    var app &#x3D; new Vue(&#123;</span><br><span class="line">        el:&quot;#app&quot;,&#x2F;&#x2F;默认id选择器</span><br><span class="line">        &#x2F;&#x2F;el:&quot;.app&quot;,&#x2F;&#x2F;class选择器也可以用</span><br><span class="line">        &#x2F;&#x2F;el:&quot;div&quot;，&#x2F;&#x2F;标签选择器也可以用</span><br><span class="line">        data:&#123;</span><br><span class="line">            message:&quot;hello Vue!&quot;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">    &lt;&#x2F;script&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br></pre></td></tr></table></figure>
-<hr>
-<h2 id="data-数据对象"><a href="#data-数据对象" class="headerlink" title="data:数据对象"></a>data:数据对象</h2><ul>
-<li>Vue中用到的数据定义在data中</li>
-<li>data中可以写复杂类型的数据</li>
-<li>渲染复杂类型的数据时，遵循js语法即可</li>
-</ul>
-<p>样例测试代码</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div id&#x3D;&quot;app&quot;&gt;</span><br><span class="line">        &lt;span&gt;不同的获取方式&lt;&#x2F;span&gt;&lt;br&gt;</span><br><span class="line">        &#123;&#123;message&#125;&#125;</span><br><span class="line">        &lt;h2&gt;&#123;&#123;school.weibo&#125;&#125;&lt;&#x2F;h2&gt;</span><br><span class="line">        &lt;h2&gt;&#123;&#123;school.name&#125;&#125;&lt;&#x2F;h2&gt;</span><br><span class="line">        &lt;ul&gt;</span><br><span class="line">            &lt;li&gt;&#123;&#123;array_test[0]&#125;&#125;&lt;&#x2F;li&gt;</span><br><span class="line">        &lt;&#x2F;ul&gt;</span><br><span class="line"></span><br><span class="line">    &lt;&#x2F;div&gt;</span><br><span class="line"></span><br><span class="line">    &lt;script src&#x3D;&quot;https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;npm&#x2F;vue&#x2F;dist&#x2F;vue.js&quot;&gt;&lt;&#x2F;script&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line">        var app &#x3D; new Vue(&#123;</span><br><span class="line">            el:&quot;#app&quot;,</span><br><span class="line">            data:&#123;</span><br><span class="line">                message:&quot;hello world!&quot;,</span><br><span class="line">                school:&#123;</span><br><span class="line">                    name:&quot;Oliver&quot;,</span><br><span class="line">                    weibo:&quot;weibo:@一个喜欢梅西的钢铁侠&quot;,</span><br><span class="line">                    bilibili:&quot;bilibili:一个喜欢梅西的钢铁侠&quot;</span><br><span class="line">                &#125;,</span><br><span class="line">                array_test:[&quot;QQ&quot;,&quot;WeChat&quot;]</span><br><span class="line">            &#125;,</span><br><span class="line"></span><br><span class="line">        &#125;)</span><br><span class="line">    &lt;&#x2F;script&gt;</span><br><span class="line">&lt;&#x2F;body&gt;</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/01/30/Vue%E5%9F%BA%E7%A1%80/" data-id="ck615bywn00008ou1fl908nkq" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
@@ -1064,7 +1093,7 @@ HTML 标签通常是成对出现的，比如 &lt;b&gt; 和 &lt;/b&gt;
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li></ul>
     </div>
   </div>
 
@@ -1075,6 +1104,10 @@ HTML 标签通常是成对出现的，比如 &lt;b&gt; 和 &lt;/b&gt;
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2020/03/25/MySQL%E7%9A%84%E7%AC%94%E8%AE%B0-%E4%B8%80/">MySQL的笔记(一)</a>
+          </li>
         
           <li>
             <a href="/2020/02/17/%E7%B2%BE%E5%AF%86%E4%BB%AA%E5%99%A8%E8%AE%BE%E8%AE%A1%E2%80%94%E2%80%94%E5%B8%A6%E4%BC%A0%E5%8A%A8%E6%A6%82%E8%BF%B0/">精密仪器设计——带传动 概述</a>
@@ -1090,10 +1123,6 @@ HTML 标签通常是成对出现的，比如 &lt;b&gt; 和 &lt;/b&gt;
         
           <li>
             <a href="/2020/02/07/jQuery%E9%83%A8%E5%88%86%E4%BB%8B%E7%BB%8D-%E4%B8%80/">jQuery部分介绍(一)</a>
-          </li>
-        
-          <li>
-            <a href="/2020/02/04/python%E7%88%AC%E5%8F%96%E5%85%8D%E8%B4%B9%E7%BD%91%E7%BB%9C%E5%B0%8F%E8%AF%B4-%E9%9A%BE%E5%BA%A6%EF%BC%9A%E6%9E%81%E5%BA%A6easy/">python爬取免费网络小说(难度：极度easy)</a>
           </li>
         
       </ul>
